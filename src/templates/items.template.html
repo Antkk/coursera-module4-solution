@@ -1,0 +1,10 @@
+<div>
+  <p>Items</p>
+  <a ui-sref="home">Home</a>
+  
+  <ul>
+    <li ng-repeat="item in itemsCtrl.items">
+      <a>{{ item.name }}</a>
+    </li>
+  </ul>
+</div>
