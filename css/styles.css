@@ -1,3 +1,39 @@
 a {
   display: block;
+  text-decoration: none;
+}
+
+nav {
+  margin-bottom: 20px;
+}
+
+nav a {
+  display: inline-block;
+  background-color: #ccc;
+  margin-right: 20px;
+  padding: 5px 10px;
+}
+
+ul {
+  list-style: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+tr {
+  border: 1px solid black;
+}
+
+th {
+  text-align: center;
+  vertical-align: baseline;
+  border: 1px solid black;
+}
+
+td {
+  vertical-align: middle;
+  border: 1px solid black;
 }

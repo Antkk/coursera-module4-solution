@@ -4,11 +4,9 @@
 angular.module('MenuApp')
 .controller('ItemsController', function (myData) {
   var itemsController = this;
-  itemsController.items = [];
   
-  console.log('ItemsController');
-
-  itemsController.items = myData;
+  itemsController.items = myData.menu_items;
+  itemsController.categoryName = myData.category.name;
 });
   
 })();
