@@ -26,19 +26,25 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
     controller: 'CategoriesController as catController',
     resolve: {
       myData: ['MenuDataService', function (MenuDataService) {
-        return MenuDataService.getAllCategories();
+        return MenuDataService.getAllCategories().then(function(result) {
+          return result.data;
+        });
       }]
     }
   })
 
   // Item detail
-  .state('items', {
-    url: '/items',///{itemId}',///{itemId}',
+  .state('itemsView', {
+    url: '/items/{param1}',
     templateUrl: 'src/templates/items.template.html',
-    controller: 'ItemsController as itemsCtrl'
-    // params: {
-    //   itemId: null
-    // }
+    controller: 'ItemsController as itemsCtrl',
+    resolve: {
+      myData: ['$stateParams', 'MenuDataService', function ($stateParams, MenuDataService) {
+        return MenuDataService.getItemsForCategory($stateParams.param1).then(function(result) {
+          return result.data.menu_items;
+        });
+      }]
+    }
   });
 
 }

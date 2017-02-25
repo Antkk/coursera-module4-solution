@@ -1,11 +1,11 @@
 <div>
   <p>Categories</p>
-  <a ui-sref="items">Items</a>
+  <a ui-sref="itemsView">Items</a>
   <a ui-sref="home">Home</a>
   
   <ul>
     <li ng-repeat="item in catController.items">
-      <a ui-sref="items">{{ item.name }}</a>
+      <a ui-sref="itemsView({ param1: item.short_name })">{{ item.name }}</a>
     </li>
   </ul>
 </div>

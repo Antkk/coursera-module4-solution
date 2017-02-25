@@ -8,7 +8,7 @@ angular.module('MenuApp')
   
   console.log('CategoriesController');
 
-  categoriesController.items = myData.data;
+  categoriesController.items = myData;
 });
   
 })();
