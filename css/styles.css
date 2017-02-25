@@ -1,6 +1,7 @@
 a {
   display: block;
   text-decoration: none;
+  font-size: 140%;
 }
 
 nav {
@@ -18,9 +19,16 @@ ul {
   list-style: none;
 }
 
+li {
+  margin-bottom: 10px;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
+  font-size: 120%;
+  max-width: 90%;
+  margin: 0 auto;
 }
 
 tr {
@@ -31,9 +39,11 @@ th {
   text-align: center;
   vertical-align: baseline;
   border: 1px solid black;
+  padding: 10px;
 }
 
 td {
   vertical-align: middle;
   border: 1px solid black;
+  padding: 10px;
 }
